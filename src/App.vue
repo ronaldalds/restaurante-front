@@ -167,9 +167,8 @@ export default {
     async handleLogout() {
       try {
         // Requisição de login com axios e credenciais incluídas
-        const response = await instance.get(
+        const response = await instance.post(
           '/restaurante/logout/',
-          { withCredentials: true}
         );
         if (response.status === 200) {
           this.isAuthenticated = false;

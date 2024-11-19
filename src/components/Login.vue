@@ -53,7 +53,6 @@ export default {
         const response = await instance.post(
           '/restaurante/login/',
           { username: this.username, password: this.password },
-          { withCredentials: true}
         );
 
         if (response.status === 200) {

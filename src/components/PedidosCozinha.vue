@@ -80,10 +80,9 @@ export default {
         console.log(instance)
         const response = await instance.get(
           '/restaurante/atualizar/status/',
-          { withCredentials: true}
         );
         if (response.status === 200) {
-          console.log(response.data)
+          console.log("load pedidos" + response.data)
           this.pedidos = response.data;
           localStorage.setItem('pedidos', JSON.stringify(this.pedidos));
           // Emitir o evento de autenticação bem-sucedida para o componente pai
